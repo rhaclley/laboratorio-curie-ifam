@@ -1,6 +1,8 @@
 # Laboratório Curie · Mulheres na Ciência
 
-Experiência para projeção no minicurso do IFAM, com laboratório explorável, linha do tempo e desafio de dez perguntas em equipes.
+Experiência para projeção no minicurso do IFAM, com laboratório explorável, linha do tempo e desafio de 20 perguntas em equipes.
+
+Site público: https://rhaclley.github.io/laboratorio-curie-ifam/
 
 ## Abrir sem internet
 
@@ -12,20 +14,31 @@ Abra `dist/index.html` no navegador. Os estilos, os scripts e a imagem estão in
 2. Selecione os anos da linha do tempo para conversar sobre a trajetória.
 3. Entre em “O desafio”, configure de 2 a 30 equipes e personalize seus nomes.
 4. Escolha 30, 45 ou 60 segundos de discussão, ou use o modo sem cronômetro.
-5. Leia cada curiosidade, abra a pergunta e registre A, B, C, D ou “—” para cada equipe.
-6. Revele o gabarito comentado e avance pelo placar até a rodada seguinte.
+5. Abra cada bloco, leia a curiosidade e registre A, B, C, D ou “—” para cada equipe.
+6. Confirme as escolhas e avance até concluir as 20 perguntas. Não há gabarito, classificação ou pontuação parcial durante o percurso.
+7. Na tela final, veja a classificação e abra o histórico de cada equipe para consultar suas 20 escolhas, as alternativas corretas e os acertos, erros e questões sem resposta.
+8. Consulte o gabarito comentado ao final. Se houver um erro de registro, use “Corrigir um registro de resposta”; o histórico e a classificação serão recalculados.
 
-Cada acerto vale 100 pontos. Empates compartilham a colocação. A opção de corrigir registro recalcula os pontos, sem duplicá-los. A pergunta final de reflexão não tem pontuação.
+Cada acerto vale 100 pontos, até o máximo de 2.000 pontos. Empates compartilham a colocação. A pergunta final de reflexão não tem pontuação.
+
+Os quatro blocos seguem a ordem do questionário fornecido:
+
+| Bloco | Tema | Perguntas |
+| --- | --- | --- |
+| 1 | A trajetória de Marie Curie | 1–5 |
+| 2 | Pesquisas e descobertas | 6–10 |
+| 3 | Reconhecimento e contribuição social | 11–14 |
+| 4 | Radioatividade e suas aplicações | 15–20 |
 
 ## Salvamento
 
-A partida é salva no armazenamento local do navegador, quando permitido. Use “Continuar partida” após recarregar. O cronômetro fica pausado quando a aba perde visibilidade ou quando você consulta o placar. Ao chegar a zero, o professor ainda pode concluir o registro das respostas. O tempo não avança automaticamente para outra pergunta.
+A partida é salva no armazenamento local do navegador, quando permitido. Use “Continuar partida” após recarregar. O cronômetro fica pausado quando a aba perde visibilidade ou quando você volta ao laboratório. Ao chegar a zero, o professor ainda pode concluir o registro das respostas. O tempo não avança automaticamente para outra pergunta. Partidas do questionário antigo de dez perguntas não são carregadas nesta versão, pois usam outro conjunto de questões.
 
 O salvamento depende do navegador, computador e endereço utilizados. A versão por arquivo e a versão hospedada não compartilham partidas. Não há cadastro, sincronização entre aparelhos ou respostas enviadas por celulares.
 
 ## Editar conteúdo
 
-`dist/content.js` reúne fichas dos objetos, anos da linha do tempo, perguntas, alternativas, gabaritos, explicações e fontes. `correct` usa índices começando em zero: A = 0, B = 1, C = 2, D = 3.
+`dist/content.js` reúne fichas dos objetos, anos da linha do tempo, blocos, perguntas, alternativas, gabaritos, explicações e fontes. `correct` usa índices começando em zero: A = 0, B = 1, C = 2, D = 3. Os limites `start` e `end` dos blocos também usam índices começando em zero, incluindo as duas extremidades. Atualize `revision` ao substituir o conjunto de perguntas, para evitar misturar uma partida salva com um questionário diferente.
 
 A imagem é uma recriação artística gerada com a ferramenta integrada ImageGen, e não um registro documental. Prompt: laboratório parisiense por volta de 1900, luz quente, madeira e verde profundo, sem pessoas ou inscrições, com seis objetos separados (balança, mineral, medidor elétrico, vidrarias, caderno e frascos) para exploração interativa. A imagem final está em `dist/assets/laboratorio.png`.
 
