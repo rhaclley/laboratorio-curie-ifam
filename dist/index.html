@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="Entre no laboratório de Marie Curie: explore objetos, percorra sua trajetória e participe de um desafio em equipes. Mulheres na Ciência · IFAM.">
+  <title>Laboratório Curie · Mulheres na Ciência</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Laboratório Curie, início"><span class="brand-symbol" aria-hidden="true">✳</span><span>Laboratório <strong>Curie</strong><small>MULHERES NA CIÊNCIA</small></span></a>
+    <nav aria-label="Navegação principal"><a href="#laboratorio" data-nav="lab">O laboratório</a><a href="#trajetoria" data-nav="timeline">A trajetória</a><button class="nav-game" data-action="setup">O desafio <span aria-hidden="true">↗</span></button></nav>
+    <button class="icon-button fullscreen" data-action="fullscreen" aria-label="Ativar tela cheia" title="Tela cheia">⛶</button>
+    <span class="institution"><b>IFAM</b><small>MINICURSO</small></span>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <footer class="site-footer"><span>Uma experiência sobre curiosidade, coragem e ciência.</span><div><span>Mulheres na Ciência · IFAM</span><button class="text-button" data-action="sources">Fontes & créditos ↗</button></div></footer>
+  <dialog id="modal" aria-labelledby="modal-title"><div class="modal-top"><span class="eyebrow">LABORATÓRIO CURIE</span><button class="icon-button" data-action="close-modal" aria-label="Fechar janela">×</button></div><div id="modal-body"></div></dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
