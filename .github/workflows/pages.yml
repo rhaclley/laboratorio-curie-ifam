@@ -1,0 +1,50 @@
+name: Publicar Laboratório Curie
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dist/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Publicar site estático
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Obter arquivos do projeto
+        uses: actions/checkout@v6
+
+      - name: Verificar scripts e arquivos essenciais
+        shell: bash
+        run: |
+          node --check dist/app.js
+          node --check dist/content.js
+          test -s dist/index.html
+          test -s dist/styles.css
+          test -s dist/assets/laboratorio.png
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Preparar arquivos públicos
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4
