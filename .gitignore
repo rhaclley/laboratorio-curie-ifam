@@ -1,0 +1,12 @@
+# Arquivos locais de ferramentas e sistemas operacionais
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+Thumbs.db
+.DS_Store
+
+# Pacotes locais de publicação
+*.tar.gz
+*.zip
